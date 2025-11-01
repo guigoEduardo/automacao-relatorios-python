@@ -1,0 +1,11 @@
+# Ambiente virtual do Python
+venv/
+
+# Arquivos Excel (Entrada e Saída)
+*.xlsx
+
+# Arquivos CSV (caso tenha usado)
+*.csv
+
+# Pasta de cache do Python
+__pycache__/
