@@ -1,47 +1,41 @@
-# 🤖 Meu Primeiro Projeto de Automação com Python
+# Projeto de Automação de Planilhas com Python
 
-Este é um projeto de estudos que criei para praticar Python e a biblioteca Pandas.
+Este projeto foi criado para praticar Python e a biblioteca Pandas. O objetivo é automatizar a tarefa de juntar informações de duas planilhas diferentes de forma rápida e organizada.
 
-O objetivo era aprender como automatizar uma tarefa que eu costumava fazer manualmente no Excel.
+## Descrição do Desafio
 
-## 🎯 O Desafio
+O script resolve um problema comum: unir dados de fontes distintas. No exemplo utilizado, temos dois arquivos:
+* **funcionarios.xlsx**: Contém a lista de funcionários.
+* **absenteismo.xlsx**: Contém a lista de faltas.
 
-No meu trabalho e em cursos, eu vi que muitas vezes precisamos juntar informações de planilhas diferentes.
+O script lê esses arquivos e cria um terceiro relatório consolidado, automatizando o que seria feito manualmente com funções como o PROCV no Excel.
 
-Neste projeto, eu imaginei um cenário com duas planilhas:
-1.  `funcionarios.xlsx`: Uma lista de funcionários.
-2.  `absenteismo.xlsx`: Uma lista de faltas.
+## Ferramentas Utilizadas
 
-O desafio era: como eu posso criar um terceiro relatório, juntando as informações dessas duas planilhas, sem ter que usar `PROCV` (VLOOKUP) no Excel manualmente?
+* **Python**: Linguagem de programação base.
+* **Pandas**: Biblioteca para manipulação e análise de dados.
+* **OpenPyXL**: Biblioteca para leitura e escrita de arquivos Excel.
 
-## 🚀 A Solução com Python
+## Como Funciona
 
-Eu usei o Python para criar um script que faz todo o trabalho pesado:
+1. O script carrega os dados das duas planilhas.
+2. Utiliza o ID do funcionário para cruzar as informações.
+3. Organiza as colunas e limpa os dados.
+4. Exporta o resultado para um novo arquivo chamado **relatorio_consolidado.xlsx**.
 
-1.  O script lê os dois arquivos (`funcionarios.xlsx` e `absenteismo.xlsx`).
-2.  Ele usa a biblioteca **Pandas** para "cruzar" as informações, usando o ID do funcionário como chave.
-3.  Depois de juntar tudo, ele limpa os dados e organiza as colunas.
-4.  No final, ele salva um **novo arquivo** chamado `relatorio_consolidado.xlsx`, já com tudo pronto!
+## Passo a Passo para Executar
 
-## 🛠️ O que eu Usei (e Aprendi)
+Para rodar o projeto na sua máquina, siga estas etapas no terminal:
 
-* **Python:** A linguagem de programação.
-* **Pandas:** A principal biblioteca que usei. Aprendi a usar o `pd.read_excel` (para ler), o `pd.merge` (para juntar) e o `pd.to_excel` (para salvar).
-* **OpenPyXL:** A ferramenta que o Pandas usa por baixo dos panos para funcionar com arquivos `.xlsx`.
-* **Ambiente Virtual (`venv`):** Aprendi a criar um ambiente separado para instalar as bibliotecas do projeto, o que é uma boa prática.
+1. **Clonar o repositório** para o seu computador.
+2. **Criar um ambiente virtual** para manter as bibliotecas organizadas:
+   python -m venv venv
+3. **Ativar o ambiente virtual**:
+   - No Windows: `venv\Scripts\activate`
+   - No Mac/Linux: `source venv/bin/activate`
+4. **Instalar as dependências**:
+   pip install pandas openpyxl
+5. **Rodar o script**:
+   python main.py
 
-## 🏁 Como Executar
-
-Se você quiser testar meu script, estes são os passos:
-
-1.  **Clone este repositório.**
-2.  **Abra o terminal** na pasta do projeto.
-3.  **Crie e ative um ambiente virtual:**
-    * `python -m venv venv`
-    * `venv\Scripts\activate` (no Windows)
-4.  **Instale o que precisa:**
-    * `pip install pandas openpyxl`
-5.  **Rode o script:**
-    * `python main.py`
-
-E pronto! O script vai criar o arquivo `relatorio_consolidado.xlsx` para você.
+Após seguir esses passos, o novo arquivo Excel será gerado na pasta do projeto.
