@@ -8,7 +8,7 @@ O script resolve um problema comum: unir dados de fontes distintas. No exemplo u
 * **funcionarios.xlsx**: Contém a lista de funcionários.
 * **absenteismo.xlsx**: Contém a lista de faltas.
 
-O script lê esses arquivos e cria um terceiro relatório consolidado, automatizando o que seria feito manualmente com funções como o PROCV no Excel.
+O script lê esses arquivos e cria um terceiro relatório consolidado, automatizando o que seria feito manualmente com funções como o PROCV no Excel, a diferença é que permite um número gigante de dados, o que no Excel poderia ser uma limitação.
 
 ## Ferramentas Utilizadas
 
